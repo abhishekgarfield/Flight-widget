@@ -33,13 +33,21 @@ export const Homescreen = () => {
       var tablerow = document.createElement("tr");
       var rowicon = document.createElement("td");
       rowicon.textContent = "✈";
+
+      var d = new Date(flight.lastSeen * 1000);
+
+      var formatdata = `${("0" + d.getHours()).substr(-2)}:${(
+        "0" + d.getMinutes()
+      ).substr(-2)}`;
+
+      console.log(formatdata);
       tablerow.append(rowicon);
       const temp = {
-        callsign: flight.callsign,
+        callsign: flight.callsign.trim(),
         destination: flight.estArrivalAirport,
         pickup: flight.estDepartureAirport,
         distance: flight.estDepartureAirportHorizDistance,
-        lastseen: flight.lastSeen,
+        lastseen: formatdata,
       };
       for (const key in temp) {
         var el = document.createElement("td");
@@ -66,11 +74,11 @@ export const Homescreen = () => {
       <table>
         <tr>
           <th></th>
-          <th>TIME</th>
-          <th>DESTINATION</th>
-          <th>FLIGHT</th>
+          <th>CALLSIGN</th>
+          <th>DROP</th>
+          <th>PICKUP</th>
           <th>GATE</th>
-          <th>REMARKS</th>
+          <th>TIME</th>
         </tr>
       </table>
     </div>

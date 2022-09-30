@@ -5,5 +5,58 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-color: rgb(251,199,127);
+  font-family:'Ubuntu Condensed',sans-serif;
 }
 
+.First-container
+{
+  display: flex;
+  text-align: center;
+  margin: 0px auto;
+  justify-content:space-between;
+  background-color: rgb(6, 6, 6);
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+}
+.heading{
+  display: flex;
+  color: white;
+  flex-basis: 100%;
+  background-color: black;
+  font-weight: bold;
+}
+table{
+  background-color: rgba(46,46,46);
+  color: white;
+  border-spacing: 2px;
+  text-align: start;
+  font-family:'Ubuntu Condensed',sans-serif;
+}
+th{
+  font-weight: bold;
+  font-size: 35px;
+  text-align: start;
+}
+td{
+  font-weight: bold;
+  font-size: 35px;
+  padding: 1px;
+  text-align:start;
+  margin: 0px 4px 0px 4px;
+}
+.inside{
+  padding: 2px;
+  width: fit-content;
+  min-width: 20px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  float: left;
+  border: solid 4px rgb(26, 26, 26);
+  margin: 2px;
+}
