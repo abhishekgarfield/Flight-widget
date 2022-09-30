@@ -74,3 +74,23 @@ td{
   50%{transform: rotateX(90deg);}
   100%{transform: rotateX(0deg);}
 }
+
+@media screen and (max-width:700px)
+{
+  body{
+    display: block;
+    background-color: black;
+  }
+
+  .inside{
+    clear: both;
+  }
+  th{
+    font-size: 15px;
+    padding: 0px 20px;
+  }
+  td{
+    font-size: 15px;
+    padding: 0px 20px;
+  }
+}
