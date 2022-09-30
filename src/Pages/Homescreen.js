@@ -27,10 +27,6 @@ export const Homescreen = () => {
   }, []);
   function display(flights) {
     const table = document.getElementsByTagName("table");
-    /* flights.forEach(flight => {
-            console.log(flight);
-        });
-        */
 
     for (const flight of flights) {
       console.log(flight);
@@ -45,10 +41,17 @@ export const Homescreen = () => {
         distance: flight.estDepartureAirportHorizDistance,
         lastseen: flight.lastSeen,
       };
-      for (const key in flight) {
-        console.log(flight[key]);
+      for (const key in temp) {
         var el = document.createElement("td");
-        el.textContent = flight[key];
+        temp[key]
+          .toString()
+          .split("")
+          .forEach((item) => {
+            var div = document.createElement("div");
+            div.textContent = item;
+            div.className = "inside";
+            el.append(div);
+          });
         tablerow.appendChild(el);
       }
       table[0].appendChild(tablerow);
