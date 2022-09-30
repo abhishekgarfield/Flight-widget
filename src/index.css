@@ -35,6 +35,10 @@ body {
   background-color: black;
   font-weight: bold;
 }
+h1{
+  font-weight: 600;
+    font-size: 50px;
+}
 table{
   background-color: rgba(46,46,46);
   color: white;
@@ -43,7 +47,7 @@ table{
   font-family:'Ubuntu Condensed',sans-serif;
 }
 th{
-  font-weight: bold;
+  font-weight: 500;
   font-size: 35px;
   text-align: start;
 }

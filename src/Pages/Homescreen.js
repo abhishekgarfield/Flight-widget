@@ -1,5 +1,4 @@
-import { toBeDisabled } from "@testing-library/jest-dom/dist/matchers";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Homescreen = () => {
   useEffect(() => {
@@ -56,7 +55,9 @@ const Homescreen = () => {
           .toString()
           .split("")
           .forEach((item, index) => {
+            console.log(index);
             var div = document.createElement("div");
+
             div.textContent = item;
             div.className = "inside";
             el.append(div);
