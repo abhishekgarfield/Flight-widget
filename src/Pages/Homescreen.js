@@ -1,7 +1,7 @@
 import { toBeDisabled } from "@testing-library/jest-dom/dist/matchers";
 import { useEffect, useState } from "react";
 
-export const Homescreen = () => {
+const Homescreen = () => {
   useEffect(() => {
     var d = new Date();
     var starttime = (
@@ -26,21 +26,21 @@ export const Homescreen = () => {
       });
   }, []);
   function display(flights) {
-    const table = document.getElementsByTagName("table");
+    const table = document.getElementById("table-body");
 
     for (const flight of flights) {
       console.log(flight);
       var tablerow = document.createElement("tr");
       var rowicon = document.createElement("td");
-      rowicon.textContent = "✈";
+      rowicon.style.fontSize = "50px";
+
+      rowicon.innerHTML = "✈";
 
       var d = new Date(flight.lastSeen * 1000);
 
       var formatdata = `${("0" + d.getHours()).substr(-2)}:${(
         "0" + d.getMinutes()
       ).substr(-2)}`;
-
-      console.log(formatdata);
       tablerow.append(rowicon);
       const temp = {
         callsign: flight.callsign.trim(),
@@ -49,12 +49,13 @@ export const Homescreen = () => {
         distance: flight.estDepartureAirportHorizDistance,
         lastseen: formatdata,
       };
+
       for (const key in temp) {
         var el = document.createElement("td");
         temp[key]
           .toString()
           .split("")
-          .forEach((item) => {
+          .forEach((item, index) => {
             var div = document.createElement("div");
             div.textContent = item;
             div.className = "inside";
@@ -62,7 +63,7 @@ export const Homescreen = () => {
           });
         tablerow.appendChild(el);
       }
-      table[0].appendChild(tablerow);
+      table.appendChild(tablerow);
     }
   }
 
@@ -73,14 +74,18 @@ export const Homescreen = () => {
       </div>
       <table>
         <tr>
-          <th></th>
-          <th>CALLSIGN</th>
-          <th>DROP</th>
-          <th>PICKUP</th>
-          <th>GATE</th>
-          <th>TIME</th>
+          <thead>
+            <th></th>
+            <th>CALLSIGN</th>
+            <th>DROP</th>
+            <th>PICKUP</th>
+            <th>GATE</th>
+            <th>TIME</th>
+          </thead>
+          <tbody id="table-body"></tbody>
         </tr>
       </table>
     </div>
   );
 };
+export default Homescreen;

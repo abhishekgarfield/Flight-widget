@@ -12,6 +12,10 @@ body {
   background-color: rgb(251,199,127);
   font-family:'Ubuntu Condensed',sans-serif;
 }
+*
+{
+  font-family:'Ubuntu Condensed',sans-serif;
+}
 
 .First-container
 {
@@ -44,11 +48,10 @@ th{
   text-align: start;
 }
 td{
-  font-weight: bold;
   font-size: 35px;
   padding: 1px;
   text-align:start;
-  margin: 0px 4px 0px 4px;
+  margin: 20px;
 }
 .inside{
   padding: 2px;
@@ -59,4 +62,10 @@ td{
   float: left;
   border: solid 4px rgb(26, 26, 26);
   margin: 2px;
+  animation: flip 0.5s linear ;
+}
+@keyframes flip{
+  0%{transform: rotateX(0deg);}
+  50%{transform: rotateX(90deg);}
+  100%{transform: rotateX(0deg);}
 }

@@ -1,4 +1,4 @@
-import {Homescreen} from "./Pages/Homescreen"
+import Homescreen from "./Pages/Homescreen";
 
 function App() {
   return (
