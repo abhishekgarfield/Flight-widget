@@ -1,10 +1,8 @@
-
+import {Homescreen} from "./Pages/Homescreen"
 
 function App() {
   return (
-    <div className="App">
-     hello
-    </div>
+    <Homescreen/>
   );
 }
 
