@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Flight-widget/static/css/main.ba80fcbd.css",
+    "main.js": "/Flight-widget/static/js/main.f74f510f.js",
+    "index.html": "/Flight-widget/index.html",
+    "main.ba80fcbd.css.map": "/Flight-widget/static/css/main.ba80fcbd.css.map",
+    "main.f74f510f.js.map": "/Flight-widget/static/js/main.f74f510f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba80fcbd.css",
+    "static/js/main.f74f510f.js"
+  ]
+}
