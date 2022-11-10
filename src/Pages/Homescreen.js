@@ -49,10 +49,9 @@ const Homescreen = () => {
         lastseen: formatdata,
       };
 
-      for (const key in temp) {
+       for (const key in temp) {
         var el = document.createElement("td");
-        temp[key]
-          .toString()
+        temp[key]?.toString()
           .split("")
           .forEach((item, index) => {
             console.log(index);
